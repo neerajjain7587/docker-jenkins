@@ -1,4 +1,4 @@
 node {
-    def customImage = docker.build("test-image", "neerajjain7587/docker-jenkins")
+    def customImage = docker.build()
     customImage.push()
 }
