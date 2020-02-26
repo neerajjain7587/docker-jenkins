@@ -1,4 +1,5 @@
 node {
-    def customImage = docker.build("my-image","-f ${dockerfile} ./dockerfiles")
+    cd $WORKSPACE
+    def customImage = docker.build("my-image","-f ${Dockerfile} ./dockerfiles")
     customImage.push()
 }
